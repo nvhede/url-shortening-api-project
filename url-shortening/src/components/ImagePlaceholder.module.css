@@ -1,0 +1,29 @@
+.image {
+    height: 100%;
+    width: 100%;
+}
+
+.placeholder {
+    height: 100%;
+    width: 100%;
+    background-color: var(--grey);
+    background: #f6f7f8;
+    background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
+    background-size: 800px 104px;
+    position: relative;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: placeholderShimmer;
+    animation-timing-function: linear;
+}
+
+@keyframes placeholderShimmer {
+    0% {
+        background-position: -468px 0;
+    }
+
+    100% {
+        background-position: 469px 0;
+    }
+}

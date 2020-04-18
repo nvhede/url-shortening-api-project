@@ -1,0 +1,14 @@
+.link {
+    display: inline-block;
+    background-image: none;
+    background-color: var(--cyan);
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: var(--strongFontWeight);
+    padding: 5px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}

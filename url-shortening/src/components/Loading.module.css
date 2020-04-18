@@ -1,0 +1,23 @@
+.loading {
+    height: 50px;
+    width: 50px;
+    border: solid 5px var(--grey);
+    border-radius: 50%;
+    border-top-color: var(--cyan);
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    will-change: transform;
+    animation: spin 1s ease-in-out infinite;
+    -webkit-animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { -webkit-transform: rotate(360deg);}
+}
+
+@-webkit-keyframes spin {
+    to { -webkit-transform: rotate(360deg);}
+}

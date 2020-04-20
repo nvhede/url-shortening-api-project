@@ -1,39 +1,32 @@
-import React, { useState, useEffect, Fragment } from 'react'
+import React from 'react'
 import { NavLink, Link } from 'react-router-dom'
-import PropTypes from 'prop-types'
 
-import ImagePlaceholder from '../components/ImagePlaceholder'
+
 import Button from '../components/Button'
 import styles from './Header.module.css'
+import { ReactComponent as Logo } from '../images/logo.svg'
 
 
 const Header = () => {
-    const image = {
-        url: '/public/images/logo.svg',
-        height: 200,
-        width: 200,
-        alt: 'This is a logo of the page. Titled "Shortly"',
-    }
-
     return (
         <header className={styles.header}>
-            <ImagePlaceholder image={image} imageStyle={{marginLeft: 15}}/>
             <div className={styles.links}>
-                <NavLink 
+                <Link to={'/'} className={styles.logo}><Logo/></Link>
+                <NavLink exact
                     to={'/features'}
                     className={styles.link} 
                     activeClassName={styles.linkSelected}
                 >
                     Features
-                </NavLink>
-                <NavLink 
+                </NavLink>  
+                <NavLink exact
                     to={'/pricing'}
                     className={styles.link} 
                     activeClassName={styles.linkSelected}
                 >
                     Pricing
                 </NavLink>
-                <NavLink 
+                <NavLink exact
                     to={'/resources'}
                     className={styles.link} 
                     activeClassName={styles.linkSelected}
@@ -42,7 +35,7 @@ const Header = () => {
                 </NavLink>
             </div>
             <div className={styles.auth}>
-                <NavLink 
+                <NavLink exact
                     to={'/login'}
                     className={styles.link} 
                     activeClassName={styles.linkSelected}
@@ -53,10 +46,6 @@ const Header = () => {
             </div>
         </header>
     )
-}
-
-Header.propTypes  = {
-
 }
 
 export default Header

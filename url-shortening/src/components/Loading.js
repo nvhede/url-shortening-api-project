@@ -27,8 +27,9 @@ const Loading = ({delayTime, children}) => {
     }
 
     if (children) return children
+    if (isDelayed) return null
     return (
-        <span style={loadingStyle}></span>
+        <span className={styles.loading}></span>
     )
 
 }

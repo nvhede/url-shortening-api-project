@@ -21,7 +21,6 @@ const Button = ({text, handleClick, href, disabled}) => {
             disabled={disabled}
             type={handleClick ? 'button' : 'submit'}
             onClick={handleClick}
-
         >
             {text}
         </button>

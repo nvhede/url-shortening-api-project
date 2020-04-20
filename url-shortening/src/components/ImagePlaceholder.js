@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import styles from './ImagePlaceholder.module.css'
 
-const ImagePlaceholder = ({image, imageStyle, renderError}) => {
+const ImagePlaceholder = ({image, renderError}) => {
     const [isLoading, setLoading] = useState(false)
     const [hasError, setError] = useState(false)
 
@@ -14,14 +14,6 @@ const ImagePlaceholder = ({image, imageStyle, renderError}) => {
 
     const onLoad = () => setLoading(true)
 
-    const getImageStyle = styleOverride => {
-        return {
-            ...styles.image,
-            ...((isLoading || hasError) && {display: 'hidden'}),
-            ...styleOverride,
-        }
-    }
-
     if (hasError) {
         return renderError || null
     }
@@ -31,7 +23,7 @@ const ImagePlaceholder = ({image, imageStyle, renderError}) => {
 
     return (
         <img
-            style={getImageStyle(imageStyle)}
+            className={styles.image}
             url={image.url}
             onLoad={onLoad}
             onError={handleError}
@@ -48,7 +40,6 @@ ImagePlaceholder.propTypes = {
         url: PropTypes.string,
         alt: PropTypes.string,
     }).isRequired,
-    imageStyle: PropTypes.object,
     renderError: PropTypes.func,
 }
 

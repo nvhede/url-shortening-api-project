@@ -2,6 +2,7 @@ import React from 'react';
 import '../../styles/base.css';
 
 import Header from '../../components/Header'
+import Footer from '../../components/Footer'
 import AppRoutes from './AppRoutes'
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
     <div className="App">
       <Header/>
       <AppRoutes/>
+      <Footer/>
     </div>
   );
 }

@@ -1,13 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { NavLink, Link } from 'react-router-dom'
 
-
-import Button from '../components/Button'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
+import Button, { TextSizes } from '../components/Button'
+import Menu from '../components/Menu'
 import styles from './Header.module.css'
 import { ReactComponent as Logo } from '../images/logo.svg'
 
 
 const Header = () => {
+
+    const [showMenu, setMenuVisibility ] = useState(false)
+
+    const toggleMenuVisibility = () => setMenuVisibility(!showMenu)
     return (
         <header className={styles.header}>
             <div className={styles.links}>
@@ -42,8 +48,12 @@ const Header = () => {
                 >
                     Login
                 </NavLink>
-                <Button text={'Sign Up'} href={'/signup'}/>
+                <Button text={'Sign Up'} textSize={TextSizes.large} href={'/signup'}/>
             </div>
+            <div className={styles.hamburgerIcon} onClick={toggleMenuVisibility}><FontAwesomeIcon icon={faBars}/></div>
+            {showMenu && 
+                <Menu isOpen={showMenu} toggleMenu={toggleMenuVisibility}/>
+            }
         </header>
     )
 }

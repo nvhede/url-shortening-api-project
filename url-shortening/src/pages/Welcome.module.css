@@ -1,0 +1,10 @@
+.container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.title {
+    font-size: 5rem;
+}

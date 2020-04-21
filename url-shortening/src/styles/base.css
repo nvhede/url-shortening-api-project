@@ -32,6 +32,16 @@ html body{
     -moz-osx-font-smoothing: grayscale;
 }
 
+#root {
+    height: 100%; 
+}
+
+.App {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
 h1,
 h2,
 h3,
@@ -40,9 +50,9 @@ h4 {
     font-weight: var(--strongFontWeight);
 }
 
-div {
+/* div {
     font-size: 15px;
-}
+} */
 
 p {
     color: var(--neutralViolet);

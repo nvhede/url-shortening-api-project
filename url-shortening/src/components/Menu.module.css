@@ -1,0 +1,49 @@
+.menuClosed {
+    position: fixed;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--neutralDarkViolet);
+    height: 100%;
+    padding-bottom: 150px;
+    padding-top: 150px;
+    padding-left: 75px;
+    padding-right: 75px;
+    z-index: 100;
+    top: 0;
+    right: -100%;
+    transition-property: right;
+    transition-duration: .5s;
+    transition-timing-function: ease;
+}
+
+.menuOpen {
+    position: fixed;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--neutralDarkViolet);
+    height: 100%;
+    max-width: 200px;
+    padding-bottom: 150px;
+    padding-top: 150px;
+    padding-left: 75px;
+    padding-right: 75px;
+    z-index: 100;
+    top: 0;
+    right: 0;
+    transition-property: right;
+    transition-duration: .5s;
+    transition-timing-function: ease;
+}
+
+.exit {
+    align-self: flex-end;
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+}

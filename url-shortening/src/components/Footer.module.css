@@ -37,7 +37,7 @@
 
 .headerCompany {
     font-weight: var(--strongFontWeight);
-    margin-bottom: 15px;
+    margin-bottom: 13.25px;
     color: white;
     margin-top: 18px;
 }
@@ -45,7 +45,7 @@
 .link {
     cursor: pointer;
     color: white;
-    font-size: 12px;
+    font-size: .75rem;
 }
 
 .socialMediaContainer {

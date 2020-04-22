@@ -1,13 +1,14 @@
 
 /* Variables */
 :root {
-    --cyan: #2acfcf;
-    --darkViolet: #3b3054;
-    --red: #f46262;
-    --grey: #bfbfbf;
-    --neutralViolet: #9e9aa7;
-    --neutralBlue: #35323e;
-    --neutralDarkViolet: #232127;
+    --cyan: hsl(180, 66%, 49%);
+    --darkViolet: hsl(257, 27%, 26%);
+    --red: hsl(0, 87%, 67%);
+    --grey: hsl(0, 0%, 75%);
+    --lightGrey:  hsl(0, 0%, 95%);
+    --neutralViolet: hsl(257, 7%, 63%);
+    --neutralBlue: hsl(255, 11%, 22%);
+    --neutralDarkViolet: hsl(260, 8%, 14%);
     --regularFontWeight: 500;
     --strongFontWeight: 700;
 }
@@ -49,10 +50,6 @@ h4 {
     color: var(--neutralDarkViolet);
     font-weight: var(--strongFontWeight);
 }
-
-/* div {
-    font-size: 15px;
-} */
 
 p {
     color: var(--neutralViolet);
@@ -100,7 +97,10 @@ button {
     color: white;
     font-size: .65rem;
     font-weight: var(--strongFontWeight);
-    padding: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
     border: none;
     border-radius: 15px;
     cursor: pointer;
@@ -116,7 +116,10 @@ button:hover {
     color: white;
     font-size: .65rem;
     font-weight: var(--strongFontWeight);
-    padding: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
     border: none;
     border-radius: 15px;
     cursor: pointer;

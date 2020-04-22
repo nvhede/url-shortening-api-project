@@ -8,12 +8,19 @@
     font-size: .65rem;
     font-weight: var(--strongFontWeight);
     padding: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
     border: none;
     border-radius: 15px;
     cursor: pointer;
     transition: 2s linear color;
     opacity: 1;
     min-width: 75px;
+}
+
+button.jumbo {
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .link:hover {

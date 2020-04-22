@@ -7,12 +7,14 @@ export const TextSizes = {
     small: .75,
     medium: 1,
     large: 1.25,
+    jumbo: 1.75,
 }
 
 
 const Button = ({text, handleClick, textSize, href, disabled}) => {
     const textStyle = {
-        fontSize: `${textSize}em`
+        fontSize: `${textSize}em`,
+        fontWeight: 700,
     }
 
     if (href) return (
@@ -28,7 +30,7 @@ const Button = ({text, handleClick, textSize, href, disabled}) => {
     
     return (
         <button 
-            className={styles.button}
+            className={textSize === TextSizes.jumbo ? styles.jumbo : ''}
             disabled={disabled}
             type={handleClick ? 'button' : 'submit'}
             onClick={handleClick}

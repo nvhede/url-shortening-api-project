@@ -1,4 +1,4 @@
-.container {
+.mainContainer {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
@@ -10,50 +10,55 @@
 }
 
 .searchContainer {
-    background-color: var(--neutralDarkViolet);
+    background-color: var(--neutralBlue);
     background-image: url(../images/bg-shorten-desktop.svg);
-    width: 100%;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     border-radius: 10px;
-    height: 250px;
-    width: 100%;
     max-width: 1000px;
-    min-width: 250px;
+    width: 100%;
+    min-height: 125px;
     padding-top: 30px;
     padding-bottom: 30px;
     position: relative;
     top: 60px;
 }
 
-.container2 {
+.dashboardContainer {
     background-color: var(--lightGrey);
     display: flex;
     width: 100%;
     height: 100%;
-    min-height: 100px;
+    /* min-height: 100px; */
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 75px;
+    padding-right: 75px;
 }
 
-.info {
+.boostContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 300px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    background-color: var(--neutralBlue);
+    background-image: url(../images/bg-boost-desktop.svg);
+}
+
+.infoContainer {
     max-width: 50%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
     flex-shrink: 1;
-}
-
-.text {
-    padding-right: 70px;
-    margin-bottom: 20px;
-    margin-top: 20px;
-    font-weight: var(--strongFontWeight);
-}
-
-.logo {
-    max-width: 50%;
-    flex-shrink: 2;
+    flex-grow: 1;
 }
 
 .title {
@@ -61,10 +66,66 @@
     line-height: 5.5rem;
 }
 
-@media (max-width: 900px) and (min-width: 651px) {
+.text {
+    margin-right: 70px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-weight: var(--strongFontWeight);
+}
 
+.logoContainer {
+    width: 50%;
+}
+
+.logo {
+    margin-left: 25px;
+    max-width: none;
+    flex-shrink: 1;
+    flex-grow: 1;
+}
+
+.boostTitle {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: white;
 }
 
 @media (max-width: 650px) and (min-width: 320px) {
+    .mainContainer {
+        flex-wrap: wrap-reverse;
+    }
 
+    .infoContainer {
+        max-width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .title {
+        font-size: 12vw;
+        line-height: 15vw;
+    }
+
+    .text {
+        margin-right: 0px;
+    }
+
+    .searchContainer {
+        width: 80%;
+    }
+
+    .logoContainer {
+        width: auto;
+        margin-bottom: 10px;
+    }
+
+    .logo {
+        max-width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .boostContainer {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
 }

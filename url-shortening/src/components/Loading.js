@@ -21,11 +21,6 @@ const Loading = ({delayTime, children}) => {
         }
     })
 
-    const loadingStyle = {
-        ...styles.loading,
-        ...(isDelayed && {display: 'hidden'})
-    }
-
     if (children) return children
     if (isDelayed) return null
     return (

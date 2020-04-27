@@ -31,15 +31,15 @@ const DashboardSquare = ({icon, alt, headerText, paragraphText, alignment}) => {
     } 
 
     return (
-        <Fragment>
-        <div className={`${styles.dashboardSquareLogo} + ${getLogoAlignmentClassName(alignment)}`}>
-            <img src={icon} alt={alt}/>
+        <div className={styles.dashboardSquareContainer}>
+            <div className={`${styles.dashboardSquareLogo} + ${getLogoAlignmentClassName(alignment)}`}>
+                <img src={icon} alt={alt}/>
+            </div>
+            <div className={`${styles.dashboardSquareTextContainer} + ${getAlignmentClassName(alignment)}` }>
+                <h3 className={styles.dashboardSquareTitle}>{headerText}</h3>
+                <p className={styles.dashboardSquareText}>{paragraphText}</p>
+            </div>  
         </div>
-        <div className={`${styles.dashboardSquareContainer} + ${getAlignmentClassName(alignment)}` }>
-            <h3 className={styles.dashboardSquareTitle}>{headerText}</h3>
-            <p className={styles.dashboardSquareText}>{paragraphText}</p>
-        </div>
-   </Fragment>
     )
 }
 
